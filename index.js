@@ -1,5 +1,5 @@
 /*
-wt create pro-webflow-api.js --secret SENDGRID=__TOKEN__ --secret WEBFLOW=__TOKEN__ --parse-body
+wt create index.js --name progress-webflow --secret SENDGRID=__TOKEN__ --secret WEBFLOW=__TOKEN__ --parse-body
 */
 module.exports = (body, callback) => {
 

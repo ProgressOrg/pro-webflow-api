@@ -1,8 +1,8 @@
 {
-  "name": "pro-webflow-api",
+  "name": "webflow",
   "version": "1.0.0",
   "description": "Integrate progress.org with Webflow’s API",
-  "main": "pro-webflow-api.js",
+  "main": "index.js",
   "repository": "https://github.com/progress-org/Webflow-API.git",
   "author": "Martin Adams <heymartinadams@users.noreply.github.com>",
   "license": "SEE LICENSE IN README.md",
