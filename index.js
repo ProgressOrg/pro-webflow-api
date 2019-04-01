@@ -29,6 +29,7 @@ module.exports = (body, callback) => {
 
 				const item = i.items[0]
 
+				// CHAPTER I
 				// !!! Only send this via email if it hasn’t already been sent! We do not want to spam email recipients.
 				if (!item.email) {
 
@@ -130,13 +131,29 @@ module.exports = (body, callback) => {
 									})
 									updateItem
 										// END
-										.then(i => callback())
+										.then(i => console.log(i))
 										.catch(err => console.error(err))
 
 								}
 							})
 
 					})
+				}
+
+				// CHAPTER II: Apple News
+				if (!item['apple-news']) {
+
+				}
+
+				// CHAPTER III: Google News
+				if (!item['google-news']) {
+
+				}
+
+				// CHAPTER IV: END
+				let complete = false
+				if (complete) {
+					callback()
 				}
 
 			})
