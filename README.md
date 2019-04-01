@@ -1,4 +1,4 @@
-# progress.org
+# Progress.org
 This is the official code repository for [Progress.org](https://www.progress.org).
 
 ## Copyright
