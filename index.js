@@ -1,10 +1,12 @@
 /*
-wt create index.js --name progress-webflow --secret SENDGRID=__TOKEN__ --secret WEBFLOW=__TOKEN__ --parse-body && wt logs
+wt create index.js --name progress-webflow --secret SENDGRID=__TOKEN__ --secret WEBFLOW=__TOKEN__ --secret APPLE_NEWS_KEY= __TOKEN__ --secret APPLE_NEWS_SECRET=__TOKEN__ --parse-body && wt logs
 */
 module.exports = (body, callback) => {
 
 	const Webflow = require('webflow-api')
 	const moment = require('moment')
+	const appleNewsAPI = require('apple-news')
+
 	const webflow = new Webflow({ token: body.secrets.WEBFLOW })
 
 	const ids = {
@@ -142,7 +144,12 @@ module.exports = (body, callback) => {
 
 				// CHAPTER II: Apple News
 				if (!item['apple-news']) {
-
+					// https://github.com/micnews/apple-news
+					const appleNews = appleNewsAPI({
+						apiId: body.secrets.APPLE_NEWS_KEY,
+						apiSecret: body.secrets.APPLE_NEWS_SECRET
+					})
+					appleNews.readChannel({ channelId: 'bbad4067-5c65-4a3b-808e-389a5439274a' }, (err, data) => err ? err : console.log(data))
 				}
 
 				// CHAPTER III: Google News
