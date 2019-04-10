@@ -1,0 +1,32 @@
+<script type="text/javascript">
+// Get hashtags
+const hashtags = document.getElementsByClassName('hashtag')
+hashtagString = ''
+for (const hashtag of hashtags) {
+  hashtagString += hashtagString === ''
+    ? hashtag.textContent.substr(1)
+    : ',' + hashtag.textContent.substr(1)
+}
+
+// Find text that’s both bold and italic and replace it with Twitter sharing tooltip & functionality
+const strongs = document.getElementsByTagName('strong')
+for (let strong of strongs) {
+  if (strong.children[0].tagName === 'EM') {
+    const anchor = document.createElement('a')
+    const author = document.getElementsByClassName('social-icon twitter').length > 1
+      ? ' by @' + document.getElementsByClassName('social-icon twitter')[1].href.replace('https://twitter.com/', '')
+      : ''
+    const textContent = '“' + document.getElementsByClassName('title')[0].textContent + '”' + author + ': ' + strong.children[0].textContent
+    anchor.href = `https://twitter.com/intent/tweet/?text=${encodeURIComponent(textContent)}&url=${encodeURI(window.location.href)}&via=ProgressOrg&hashtags=${hashtagString}`
+    anchor.innerText = strong.children[0].textContent
+    anchor.setAttribute('class', 'highlight')
+    anchor.setAttribute('target', '_system')
+    strong.removeChild(strong.children[0])
+    strong.innerHTML = anchor.outerHTML
+    tippy(strong, {
+      content: '<span style="font-weight:500; font-size:18px;">Share via Twitter</span>',
+      arrow: true
+    })
+  }
+}
+</script>
