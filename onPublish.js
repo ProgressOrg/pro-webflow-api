@@ -1,5 +1,5 @@
 /*
-wt create index.js --name progress-webflow --secret SENDGRID=__TOKEN__ --secret WEBFLOW=__TOKEN__ --secret APPLE_NEWS_KEY= __TOKEN__ --secret APPLE_NEWS_SECRET=__TOKEN__ --parse-body && wt logs
+wt create onPublish.js --name progress-webflow --secret SENDGRID=__TOKEN__ --secret WEBFLOW=__TOKEN__ --secret APPLE_NEWS_KEY= __TOKEN__ --secret APPLE_NEWS_SECRET=__TOKEN__ --parse-body && wt logs
 */
 module.exports = (body, callback) => {
 
