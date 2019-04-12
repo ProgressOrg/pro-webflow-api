@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Integrate progress.org with Webflow’s API",
   "main": "index.js",
-  "repository": "https://github.com/progress-org/Webflow-API.git",
+  "repository": "https://github.com/ProgressOrg/webflow.git",
   "author": "Martin Adams <heymartinadams@users.noreply.github.com>",
   "license": "SEE LICENSE IN README.md",
   "private": false,
