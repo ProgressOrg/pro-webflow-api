@@ -1,12 +1,10 @@
 /*
-wt create articles.js --name progress-articles --secret WEBFLOW=c7a632cd5977189a4fd1d6812459af14b64b7f6c056cc11e6c2f1242ada4f2c0 --parse-body
+wt create articles.js --name progress-articles --secret WEBFLOW=cd50d2fbf1cc3ee40ebb7186138d4a5314ca1b666934b2f70e2e515d6392772e --parse-body
 */
 
-const Sheetsu = require('sheetsu-node')
 const Webflow = require('webflow-api')
 
 module.exports = (body, callback) => {
- 
 	const ids = {
 		site: '56b26b90d28b886833e7a042',
 		collections: {
@@ -17,9 +15,8 @@ module.exports = (body, callback) => {
 		}
 	}
 
-	const sheetsu = Sheetsu({ address: 'https://sheetsu.com/apis/v1.0su/9920a6e03ccf' })
 	const webflow = new Webflow({ token: body.secrets.WEBFLOW })
-	
+
 	// Cycle through collection to get each field ID
 	/*
 		const items = webflow.items({ collectionId: ids.collections.articles })
@@ -36,17 +33,18 @@ module.exports = (body, callback) => {
 
 	// STEP 1: Get spreadsheet data
 	// /*
-	sheetsu.read()
+	sheetsu
+		.read()
 		.then(sheetArticlesJson => {
-      const sheetArticles = JSON.parse(sheetArticlesJson)
-      
-      // STEP 2: Create article in Webflow
-      for (let row = 0; row < sheetArticles.length; row++) {
-        const sheetArticle = sheetArticles[row]
-        console.log(sheetArticle)
-      }
+			const sheetArticles = JSON.parse(sheetArticlesJson)
 
-      /*
+			// STEP 2: Create article in Webflow
+			for (let row = 0; row < sheetArticles.length; row++) {
+				const sheetArticle = sheetArticles[row]
+				console.log(sheetArticle)
+			}
+
+			/*
 			// STEP 2: Get articles from Webflow
 			const wfArticlesCollection = webflow.items({ collectionId: ids.collections.articles })
 			wfArticlesCollection.then(i => {
@@ -125,9 +123,7 @@ module.exports = (body, callback) => {
 
       })
       */
-
 		})
 		.catch(err => console.error(err))
-		// */
-
+	// */
 }

@@ -123,11 +123,6 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-btoa@^1.1.2:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/btoa/-/btoa-1.2.1.tgz#01a9909f8b2c93f6bf680ba26131eb30f7fa3d73"
-  integrity sha512-SB4/MIGlsiVkMcHmT+pSmIPoNDoHg+7cMzmt3Uxt628MTz2487DKSqK/fuhFBrkuqrYv5UCEnACpF4dTFNKc/g==
-
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -452,15 +447,6 @@ safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@^5.1.2:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sheetsu-node@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/sheetsu-node/-/sheetsu-node-0.0.7.tgz#ca3298d4d87ab9a13ad94566cc29bff974b1ef88"
-  integrity sha1-yjKY1Nh6uaE62UVmzCm/+XSx74g=
-  dependencies:
-    btoa "^1.1.2"
-    xhr2 "^0.1.4"
-    xmlhttprequest "^1.8.0"
-
 sshpk@^1.7.0:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.16.1.tgz#fb661c0bef29b39db40769ee39fa70093d6f6877"
@@ -524,10 +510,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-webflow-api@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/webflow-api/-/webflow-api-0.4.1.tgz#001a9e9ef78e55b01d9d50a24dbebb53386a8410"
-  integrity sha1-ABqenveOVbAdnVCiTb67UzhqhBA=
+webflow-api@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/webflow-api/-/webflow-api-0.5.0.tgz#a773a8422f0927a909bf09041ee1a4aad8d47044"
+  integrity sha512-HR5yRBgZf7z53ySQ2yR4phtxY3dLd7sTe0xsQVAau4jPLUQ7IVl9K7APM9ebJUsgLYvWiZEYihSLaPnFqZojFA==
   dependencies:
     es6-error "^4.0.0"
     isomorphic-fetch "^2.2.1"
@@ -537,13 +523,3 @@ whatwg-fetch@>=0.10.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
-
-xhr2@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/xhr2/-/xhr2-0.1.4.tgz#7f87658847716db5026323812f818cadab387a5f"
-  integrity sha1-f4dliEdxbbUCYyOBL4GMras4el8=
-
-xmlhttprequest@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
-  integrity sha1-Z/4HXFwk/vOfnWX197f+dRcZaPw=

@@ -12,7 +12,6 @@
     "@sendgrid/mail": "^6.3.1",
     "apple-news": "^2.1.0",
     "moment": "^2.24.0",
-    "sheetsu-node": "^0.0.7",
-    "webflow-api": "^0.4.1"
+    "webflow-api": "^0.5.0"
   }
 }
